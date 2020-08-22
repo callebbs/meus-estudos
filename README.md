@@ -1,2 +1,2 @@
-# meus-estudos
- Meus arquivos de estudos de programação
+# Meus Estudos
+ Meu repositório para estudos em programação.
