@@ -32,4 +32,9 @@ public class Empregado {
         return anual;
         
     }
+    
+    public void aumentarSalario() {
+        double aumentoSalario = salarioMensal * 0.10;
+        salarioMensal = salarioMensal + aumentoSalario;
+    }
 }

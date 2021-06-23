@@ -33,5 +33,15 @@ public class Empresa {
         System.out.println("O salário anual de " 
                 + empregado2.getNome() + " é: " 
                 + empregado2.calcularSalarioAnual(empregado2.getSalarioMensal()));
+        
+        System.out.println("Calculando aumento de salário...");
+        empregado1.aumentarSalario();
+        System.out.println("Novo salário de " + empregado1.getNome()
+                + " é " + empregado1.getSalarioMensal());
+        empregado2.aumentarSalario();
+        System.out.println("Novo salário de " + empregado2.getNome()
+                + " é " + empregado2.getSalarioMensal());
     }
+    
+    
 }
