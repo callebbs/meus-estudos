@@ -1,9 +1,9 @@
 <?php
 
-// Comentário em uma linha
-
+// comentário em linha
 /*
-Várias linhas
+várias
+linhas
 */
 
-echo "olá mundo!";
+echo "Olá mundo!";

@@ -1,5 +1,8 @@
 <?php
 
-$idade = 21;
+$idade = 32;
+$ano = 2021;
 
-echo $idade;
+$nascimento = $ano - $idade;
+
+echo $nascimento;
