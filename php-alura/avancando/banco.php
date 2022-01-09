@@ -11,7 +11,7 @@ $contasCorrentes = [
         'saldo' => 1000
     ],
     "123.4567.89-11" => [
-        'titular' => "Flávia",
+        'titular' => "Flavia",
         'saldo' => 300
     ], 
     "123.456.789-12" => [
@@ -25,14 +25,23 @@ $contasCorrentes['123.456.789-10'] = sacar($contasCorrentes['123.456.789-10'], 5
 $contasCorrentes["123.4567.89-11"] = sacar($contasCorrentes["123.4567.89-11"], 100);
 
 // Depositando
-$contasCorrentes['123.456.789-12'] = depositar($contasCorrentes['123.456.789-12'], -100);
+$contasCorrentes['123.456.789-12'] = depositar($contasCorrentes['123.456.789-12'], 900);
 
+// Função para colocar o titular da conta em MAIÚSCULO
+titularComLetraMaiuscula($contasCorrentes["123.456.789-12"]);
+titularComLetraMaiuscula($contasCorrentes["123.4567.89-11"]);
+
+// Remove um índice
+unset($contasCorrentes['123.456.789-10']);
 
 // Exibindo o saldo das contas
 exibeMensagem("Saldo das contas:");
 foreach ($contasCorrentes as $cpf => $conta) {
+    // list('titular' => $titular, 'saldo' => $saldo) = $conta;
+    ['titular' => $titular, 'saldo' => $saldo] = $conta;
+    
     exibeMensagem(
-        "$cpf {$conta['titular']} {$conta['saldo']}"
+        // "$cpf {$conta['titular']} {$conta['saldo']}"
+        "$cpf $titular $saldo"
     );
 }
-

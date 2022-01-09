@@ -25,3 +25,11 @@ function depositar(array $conta, float $valorADepositar): array
     
     return $conta;
 }
+
+// & - recebendo a referência na memória e não uma cópia;
+
+
+function titularComLetraMaiuscula(array &$conta)
+{
+    $conta['titular'] = strtoupper($conta['titular']);
+}
