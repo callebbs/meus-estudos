@@ -1,23 +1,22 @@
 <?php
 
 require_once 'src/Conta.php';
+require_once 'src/Titular.php';
+require_once 'src/CPF.php';
 
-$primeiraConta = new Conta('123.456.789-10', 'Calleb Bezerra');
+$vinicius = new Titular(new CPF('123.456.789-10'), 'Calleb Bezerra');
+$primeiraConta = new Conta($vinicius);
 $primeiraConta->deposita(500);
-$primeiraConta->saca(300);
+$primeiraConta->saca(300); // isso é ok
 
 echo $primeiraConta->recuperaNomeTitular() . PHP_EOL;
 echo $primeiraConta->recuperaCpfTitular() . PHP_EOL;
-echo "Saldo da conta: " . $primeiraConta->recuperaSaldo() . PHP_EOL;
+echo $primeiraConta->recuperaSaldo() . PHP_EOL;
 
-echo '----------------------------------------------------' . PHP_EOL;
-$segundaConta = new Conta('123.456.789-11', 'Flavia Lucas');
-echo $segundaConta->recuperaNomeTitular() . PHP_EOL;
-echo $segundaConta->recuperaCpfTitular() . PHP_EOL;
-echo $segundaConta->deposita(5000);
-echo "Saldo da conta: " . $segundaConta->recuperaSaldo() . PHP_EOL;
+$patricia = new Titular(new CPF('698.549.548-10'), 'Patricia');
+$segundaConta = new Conta($patricia);
+var_dump($segundaConta);
 
-$terceiraConta = new Conta('123.456.789-12', 'Ana Maria');
-
-echo '----------------------------------------------------' . PHP_EOL;
-echo "Número de contas: " . Conta::recuperaNumeroDeContas();
+$outra = new Conta(new Titular(new CPF('123.456.789-12'), 'Abcdefg'));
+unset($segundaConta);
+echo Conta::recuperaNumeroDeContas();
