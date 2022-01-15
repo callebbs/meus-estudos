@@ -1,5 +1,7 @@
 <?php
 
+namespace Alura\Banco\Modelo;
+
 class Endereco
 {
     private string $cidade;
@@ -27,12 +29,11 @@ class Endereco
 
     public function recuperaRua(): string
     {
-        return $this->rua;   
+        return $this->rua;
     }
-    
+
     public function recuperaNumero(): string
     {
         return $this->numero;
     }
-
 }
