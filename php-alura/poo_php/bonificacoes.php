@@ -1,6 +1,6 @@
 <?php
 
-use Alura\Banco\Model\CPF, Funcionario;
+use Alura\Banco\Model\{CPF, Funcionario};
 use Alura\Banco\Service\ControladorDeBonificacoes;
 
 require_once 'autoload.php';
