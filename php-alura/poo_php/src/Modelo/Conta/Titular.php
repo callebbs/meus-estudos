@@ -8,7 +8,7 @@ use Alura\Banco\Modelo\Endereco;
 
 class Titular extends Pessoa
 {
-    private Endereco $endereco;
+    private $endereco;
 
     public function __construct(CPF $cpf, string $nome, Endereco $endereco)
     {
