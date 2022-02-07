@@ -9,7 +9,7 @@ use Alura\Banco\Modelo\Endereco;
 
 class Titular extends Pessoa implements Autenticavel
 {
-    private Endereco $endereco;
+    private $endereco;
 
     public function __construct(CPF $cpf, string $nome, Endereco $endereco)
     {
