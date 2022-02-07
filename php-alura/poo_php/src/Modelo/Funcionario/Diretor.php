@@ -8,11 +8,11 @@ class Diretor extends Funcionario implements Autenticavel
 {
     public function calculaBonificacao(): float
     {
-        return $this->salario;
+        return $this->recuperaSalario() * 2;
     }
 
     public function podeAutenticar(string $senha): bool
     {
-        return $senha === '4321';
+        return $senha === '1234';
     }
 }

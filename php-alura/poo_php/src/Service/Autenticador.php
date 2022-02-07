@@ -11,7 +11,7 @@ class Autenticador
         if ($autenticavel->podeAutenticar($senha)) {
             echo "Ok. Usuário logado no sistema";
         } else {
-            echo "Ops. Senha incorreta";
+            echo "Ops. Senha incorreta.";
         }
     }
 }
