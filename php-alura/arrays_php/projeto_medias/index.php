@@ -1,22 +1,14 @@
 <?php
 
-$notas = [9, 3, 10, 5, 10, 8];
+require 'Calculadora.php';
 
-echo "<p>A nota de Português é: $notas[0]</p>";
-echo "<p>A nota de Matemática é: $notas[1]</p>";
-echo "<p>A nota de Geografia é: $notas[2]</p>";
-echo "<p>A nota de História é: $notas[3]</p>";
-echo "<p>A nota de Química é: $notas[4]</p>";
-echo "<p>A nota de Artes é: $notas[5]</p>";
+$notas = [9, 5, 10, 10];
 
-$quantidadeNotas = sizeof($notas);
+$calculadora = new Calculadora();
+$media = $calculadora->calculaMedia($notas);
 
-$soma = 0;
-
-for($i = 0; $i < $quantidadeNotas; $i++) {
-    $soma = $soma + $notas[$i];
+if($media) {
+    echo "A media é: $media";
+} else {
+    echo "Não foi possível calcular a média.";
 }
-
-$media = $soma / $quantidadeNotas;
-
-echo "A média é: $media";
