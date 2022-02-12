@@ -1,15 +1,8 @@
 <?php
 
-$mysql = new mysqli('localhost', 'root', '', 'blog');
-$mysql->set_charset('UTF-8');
-
-if($mysql == TRUE) {
-    echo "Banco conectado.";
-} else {
-    echo "Erro na conexão.";
-}
-
+require 'config.php';
 include 'Artigo.php';
+
 $artigo = new Artigo();
 $artigos = $artigo->exibirTodos();
 
